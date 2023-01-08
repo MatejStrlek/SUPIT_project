@@ -9,7 +9,8 @@
 
     <link rel="shortcut icon" href="../img/Algebra-logo.png" type="image">
     <!-- Bootstrap link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Icons for navbar link -->
     <script src="https://kit.fontawesome.com/5a17698d7d.js" crossorigin="anonymous"></script>
     <script src="../js/typing.js"></script>
@@ -23,7 +24,7 @@
             <a href="index.html"><i class="fa-solid fa-house-chimney icon-col"></i>&nbsp;Početna</a>
             <a href="o-nama.html"><i class="fa-regular fa-comments icon-col"></i>&nbsp;O nama</a>
             <a href="#"><i class="fa-solid fa-circle-info icon-col"></i>&nbsp;Novosti</a>
-            <a href="#"><i class="fa-solid fa-envelope icon-col"></i>&nbsp;Kontakt</a>
+            <a href="#" id="kontakt"><i class="fa-solid fa-envelope icon-col"></i>&nbsp;Kontakt</a>
         </div>
     </header>
     <video autoplay loop muted id="main_video">
@@ -33,5 +34,38 @@
     <div class="typing-div">
         <p id="typing-p"></p>
     </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-envelope"></i>&nbsp;Kontaktirajte nas</h2>
+            </div>
+            <div class="modal-body">
+                <form action="http://www.fulek.com/VUA/SUPIT/ContactUs" method="POST">
+                    <label for="full-name"><b>Puno Ime</b></label><br>
+                    <input type="text" id="full-name" name="name"><br>
+                    <label for="email"><b>Email</b></label><br>
+                    <input type="text" id="email" name="email"><br>
+                    <label for="importance"><b>Važnost</b></label><br>
+                    <select id="importance" name="importance">
+                        <option value="low">Niska</option>
+                        <option value="medium">Srednja</option>
+                        <option value="high">Visoka</option>
+                    </select><br>
+                    <label for="message">Poruka</label><br>
+                    <textarea id="message" name="message" rows="5" cols="30"></textarea><br>
+                    <label for="newsletter">Želim primati obavijesti</label>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="subscribe"><br>
+                    <input type="submit" value="Pošalji">
+                    <input type="button" id="close_modal" value="Odustani">
+                </form>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="../js/kontakt_modal.js"></script>
+
 </body>
+
 </html>
