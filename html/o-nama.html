@@ -19,11 +19,11 @@
 <body>
     <header>
         <div class="navbar">
-            <a href="#">Prijavi se&nbsp;<i class="fa-solid fa-right-to-bracket login-col"></i></a>
+            <a href="login_page.html">Prijavi se&nbsp;<i class="fa-solid fa-right-to-bracket login-col"></i></a>
             <a href="index.html"><i class="fa-solid fa-house-chimney icon-col"></i>&nbsp;Početna</a>
             <a href="o-nama.html"><i class="fa-regular fa-comments icon-col"></i>&nbsp;O nama</a>
             <a href="#"><i class="fa-solid fa-circle-info icon-col"></i>&nbsp;Novosti</a>
-            <a href="#"><i class="fa-solid fa-envelope icon-col"></i>&nbsp;Kontakt</a>
+            <a href="#" id="kontakt"><i class="fa-solid fa-envelope icon-col"></i>&nbsp;Kontakt</a>
         </div>
     </header>
 
@@ -322,6 +322,35 @@
         </div>
     </div>
 
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-envelope"></i>&nbsp;Kontaktirajte nas</h2>
+            </div>
+            <div class="modal-body">
+                <form action="https://www.fulek.com/mvc/supit/project-contact-form" method="POST">
+                    <label for="FullName"><b>Puno Ime</b></label><br>
+                    <input type="text" id="FullName" class="kontakt_txtbox" name="FullName"><br>
+                    <label for="Email"><b>E-mail</b></label><br>
+                    <input type="text" id="Email" class="kontakt_txtbox" name="Email"><br>
+                    <label for="Importance"><b>Važnost</b></label><br>
+                    <select id="Importance" class="kontakt_txtbox" name="Importance">
+                        <option value="low">Niska</option>
+                        <option value="medium">Srednja</option>
+                        <option value="high">Visoka</option>
+                    </select><br>
+                    <label for="Message"><b>Poruka</b></label><br>
+                    <textarea id="Message" class="kontakt_txtbox" name="Message" rows="5" cols="30"></textarea><br>
+                    <label for="ReceiveNewsletter">Želim primati obavijesti</label>
+                    <input type="checkbox" id="ReceiveNewsletter" class="kontakt_txtbox" name="ReceiveNewsletter"
+                        value="true" checked="checked"><br>
+                    <input type="submit" id="sent_btn" value="Pošalji">
+                    <input type="button" id="close_btn" value="Odustani">
+                </form>
+            </div>
+        </div>
+
+        <script src="../js/kontakt_modal.js"></script>
 </body>
 
 </html>

@@ -9,9 +9,9 @@ if (!kontakt) {
   }
 }
 
-var closeBtn = document.getElementById("close_modal");
+var closeBtn = document.getElementById("close_btn");
 if (!closeBtn) {
-  console.error("close_modal was not found");
+  console.error("close_btn was not found");
 } else {
     closeBtn.onclick = function () {
       modal.style.display = "none";

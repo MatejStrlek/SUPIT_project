@@ -9,12 +9,10 @@
 
     <link rel="shortcut icon" href="../img/Algebra-logo.png" type="image">
     <!-- Bootstrap link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Icons for navbar link -->
     <script src="https://kit.fontawesome.com/5a17698d7d.js" crossorigin="anonymous"></script>
-    <script src="../js/typing.js"></script>
-    <link rel="stylesheet" href="../css/index.css" type="text/css">
+    <link rel="stylesheet" href="../css/login_page.css" type="text/css">
 </head>
 
 <body>
@@ -27,12 +25,17 @@
             <a href="#" id="kontakt"><i class="fa-solid fa-envelope icon-col"></i>&nbsp;Kontakt</a>
         </div>
     </header>
-    <video autoplay loop muted id="main_video">
-        <source src="../video/typingOnlaptop.mp4" type="video/mp4" />
-    </video>
 
-    <div class="typing-div">
-        <p id="typing-p"></p>
+    <div class="login_div">
+        <form id="login_form" action="https://www.fulek.com/data/api/user/login" method="POST">
+            <div id="login_title">PRIJAVA KORISNIKA</div>
+            <label for="email" id="login_text">Korisničko ime</label>
+            <input type="email" id="login_textbox" name="email">
+            <label for="password" id="login_text">Lozinka</label>
+            <input type="password" id="login_textbox" name="password">
+            <button type="submit" id="login_button">Prijavi se</button>
+            <div id="register">Nemate račun?<a href="registriraj-se.html"> Registriraj se</a></div>
+        </form>
     </div>
 
     <div id="myModal" class="modal">
@@ -55,8 +58,7 @@
                     <label for="Message"><b>Poruka</b></label><br>
                     <textarea id="Message" class="kontakt_txtbox" name="Message" rows="5" cols="30"></textarea><br>
                     <label for="ReceiveNewsletter">Želim primati obavijesti</label>
-                    <input type="checkbox" id="ReceiveNewsletter" class="kontakt_txtbox" name="ReceiveNewsletter"
-                        value="true" checked="checked"><br>
+                    <input type="checkbox" id="ReceiveNewsletter" class="kontakt_txtbox" name="ReceiveNewsletter" value="true" checked="checked"><br>
                     <input type="submit" id="sent_btn" value="Pošalji">
                     <input type="button" id="close_btn" value="Odustani">
                 </form>
