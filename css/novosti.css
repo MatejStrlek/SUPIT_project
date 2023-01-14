@@ -59,13 +59,43 @@
 .first_h1_tag {
     text-align: center;
     padding-top: 2vw;
-  }
-  
-  .line_under_h1 {
+}
+
+.line_under_h1 {
     width: 50%;
     border: 1px solid orange;
-  }
+}
 
+.end>img {
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+    transform: translate(0%, 120%);
+}
+
+.end>div {
+    height: 0px;
+}
+
+.footer_img_text {
+    position: relative;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%, 30%);
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow: 3px 2px black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.gradient_zaiskri {
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(194, 27, 103);
+    text-shadow: 2px 2px black;
+}
 
 /* Modal Content */
 
@@ -84,6 +114,7 @@
         top: -300px;
         opacity: 0
     }
+
     to {
         top: 0;
         opacity: 1

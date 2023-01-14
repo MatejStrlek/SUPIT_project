@@ -126,6 +126,11 @@
     color: rgb(72, 117, 255);
 }
 
+#error_login{
+    margin-top: 10px;
+    color: red;
+}
+
 
 /* Modal Content */
 
