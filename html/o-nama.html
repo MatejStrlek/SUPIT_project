@@ -18,12 +18,38 @@
 
 <body>
     <header>
-        <div class="navbar">
-            <a href="login_page.html">Prijavi se&nbsp;<i class="fa-solid fa-right-to-bracket login-col"></i></a>
-            <a href="index.html"><i class="fa-solid fa-house-chimney icon-col"></i>&nbsp;Početna</a>
-            <a href="o-nama.html"><i class="fa-regular fa-comments icon-col"></i>&nbsp;O nama</a>
-            <a href="#"><i class="fa-solid fa-circle-info icon-col"></i>&nbsp;Novosti</a>
-            <a href="#" id="kontakt"><i class="fa-solid fa-envelope icon-col"></i>&nbsp;Kontakt</a>
+        <div class="navbar navbar-expand-sm">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="login_page.html">Prijavi se&nbsp;<i class="fa-solid fa-right-to-bracket login-col"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html"><i class="fa-solid fa-house-chimney icon-col"></i>&nbsp;Početna</a>
+                </li>
+                <li class="nav-item">
+                    <a href="o-nama.html"><i class="fa-regular fa-comments icon-col"></i>&nbsp;O nama</a>
+                </li>
+                <li class="nav-item">
+                    <a href="novosti.html"><i class="fa-solid fa-circle-info icon-col"></i>&nbsp;Novosti</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" id="kontakt"><i class="fa-solid fa-envelope icon-col"></i>&nbsp;Kontakt</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#nase_vrijednosti">Naše vrijednosti</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#povijest">Povijest</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#algebra_grupa">Algebra grupa</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#do_nas">Kako do nas</a>
+                </li>
+            </ul>
         </div>
     </header>
 
@@ -33,7 +59,7 @@
     <hr class="line_under_h1">
 
 
-    <div class="nase_vrijednosti_text">
+    <div class="nase_vrijednosti_text" id="nase_vrijednosti">
         <h2 class="naslovi"><i class="fa-sharp fa-solid fa-bolt-lightning"></i>&nbsp;Naše vrijednosti</h2>
         <span class="long_text_style">
             Obećajemo pomoć u pronalasku onoga što voliš raditi i da ćemo te poticati na izvrsnost - kvalitetom programa
@@ -87,8 +113,8 @@
         </div>
     </div>
 
-    <div class="povijest_text">
-        <h2 class="naslovi"><i class="fa-solid fa-clock-rotate-left"></i></i>&nbsp;Povijest</h2>
+    <div class="povijest_text" id="povijest">
+        <h2 class="naslovi"><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;Povijest</h2>
         <span class="long_text_style">
             Zajedno gradimo povijest Algebre. Počeli smo prije gotovo dvadeset godina i s tobom nastavljamo put prema
             novim uspjesima.
@@ -248,7 +274,7 @@
         </div>
     </div>
 
-    <div class="algebra_grupa_text">
+    <div class="algebra_grupa_text" id="algebra_grupa">
         <h2 class="naslovi"><i class="fa-solid fa-people-group"></i>&nbsp;Algebra grupa</h2>
         <span class="long_text_style">
             Algebra grupa je vodeći hrvatski i regionalni
@@ -315,12 +341,82 @@
         </div>
     </div>
 
-    <div class="kako_do_nas_div">
-        <h2 class="naslovi"><i class="fa-regular fa-compass"></i>&nbsp;Kako do nas?</h2>
-        <div class="lokacija_div">
-            <!--TODO - napraviti background image da je full screen samo u ovom divu-->
+
+    <h2 class="naslovi razmak_gore" id="do_nas"><i class="fa-regular fa-compass"></i>&nbsp;Kako do nas?</h2>
+    <div class="lokacija_background">
+        <div class="lokacija_grid">
+            <div class="lokacija_grid_item">
+                <h3 class="naslovi_lokacija"><i class="fa-solid fa-location-arrow blue_icon"></i>&nbsp;Lokacija
+                </h3><br>
+                <p class="lokacija_text">
+                    Algebra se nalazi u okviru kampusa Hrvatskog
+                    katoličkog sveučilišta (HKS) u Zagrebu, na
+                    adresi Ilica 242. Ulaz u kampus smješten je
+                    u Domobranskoj ulici. Unutar kampusa,
+                    Algebra djeluje na dvije lokacije: u
+                    novoobnovljenoj zgradi s početka 20.
+                    stoljeća koja se prostire na više od 3500
+                    četvornih metara, te na 2. katu suvremene
+                    nove poslovne zgrade koja se nalazi u
+                    neposrednoj blizini.
+                </p>
+                <h3 class="naslovi_lokacija"><i class="fa-regular fa-compass blue_icon"></i>&nbsp;Kako do
+                    nas?
+                </h3><br>
+                <p class="lokacija_text">
+                    Algebra je smještena u zapadnom dijelu grada
+                    Zagreba, na sto metara udaljenosti od
+                    tramvajske stanice Sv. Duh i na15-ak km
+                    udaljenosti od zagrebačke zračne luke.
+                </p>
+            </div>
+            <div class="lokacija_grid_item">
+                <h3 class="naslovi_lokacija"><i class="fa-solid fa-bus-simple blue_icon"></i>&nbsp;Javni
+                    prijevoz
+                </h3><br>
+                <p class="lokacija_text">
+                    Od glavnog trga, Trga bana Jelačića,
+                    udaljena je 6 tramvajskih stanica vožnje,
+                    linijama 6 i 11 u smjeru Črnomerca. Od
+                    Glavnog željezničkog kolodvora udaljena je 8
+                    stanica vožnje tramvajskom linijom 6,
+                    također u smjeru Črnomerca.
+                </p>
+                <h3 class="naslovi_lokacija"><i class="fa-solid fa-car blue_icon"></i>&nbsp;Osobno
+                    vozilo
+                </h3><br>
+                <p class="lokacija_text">
+                    O informacije o dolasku automobilom iz
+                    smjera Slavonska avenija dostupne su ovdje,
+                    iz smjera Zagrebačke avenije ovdje, a iz
+                    smjera Jadranske avenije <a href="https://goo.gl/maps/Cv8bjE4AW7SCy3dP8" target="_blank">ovdje</a>.
+                </p>
+                <h3 class="naslovi_lokacija"><i class="fa-solid fa-square-parking blue_icon"></i>&nbsp;Parking
+                </h3><br>
+                <p class="lokacija_text">
+                    Unutar kampusa posjetiteljima je na
+                    raspolaganju otvoreni parking koji se
+                    naplaćuje 4 kune po satu, dok se izvan
+                    kampusa nalazi III. parkirna zona
+                    Zagrebparkinga.
+                </p>
+            </div>
+        </div>
+        <div class="lokacija_map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.049825329603!2d15.938936815778833!3d45.81026051830567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d6d74e265877%3A0x1a4f4eae9fc461c5!2sVisoko%20u%C4%8Dili%C5%A1te%20Algebra!5e0!3m2!1shr!2shr!4v1673700223924!5m2!1shr!2shr"
+                width="1000" height="500" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
+
+    <footer class="end">
+        <img src="../img/zaiskri-bg.jpg" alt="end">
+        <div>
+            <p class="footer_img_text">Budi izvrstan u onome što voliš</p>
+            <p class="footer_img_text gradient_zaiskri">Zaiskri</p>
+        </div>
+    </footer>
 
     <div id="myModal" class="modal">
         <div class="modal-content">

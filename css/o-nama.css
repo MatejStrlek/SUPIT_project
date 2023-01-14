@@ -144,7 +144,7 @@
   width: 70%;
 }
 
-.algebra_grupa_item > h3 {
+.algebra_grupa_item>h3 {
   text-align: center;
   font-size: 12px;
   text-transform: uppercase;
@@ -152,11 +152,11 @@
   font-weight: bold;
 }
 
-.hr_style_certificates{
+.hr_style_certificates {
   border: 1px solid rgb(214, 212, 212);
 }
 
-.algebra_grupa_item > img{
+.algebra_grupa_item>img {
   max-height: 60px;
   max-width: auto;
   display: block;
@@ -164,18 +164,86 @@
   margin-right: auto;
 }
 
-.kako_do_nas_div{
-  padding: 100px 20%;
+.razmak_gore {
+  padding-top: 100px;
 }
 
-.lokacija_div{
+.lokacija_background {
   background-image: url(../img/lokacijaIMG.PNG);
-  /*TODO - napraviti background image da je full screen samo u ovom divu*/
+  background-attachment: fixed;
+  padding: 50px;
 }
 
+.lokacija_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  margin-bottom: 20px;
+  margin: 10px 20%;
+}
 
+.lokacija_grid_item {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid gray;
+  background-color: white;
+}
 
+.blue_icon {
+  color: rgb(67, 116, 239);
+}
 
+.naslovi_lokacija {
+  font-size: 24px;
+  width: 100%;
+  text-align: left;
+}
+
+.lokacija_text {
+  padding: 5px 50px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.lokacija_map {
+  display: flex;
+  justify-content: center;
+}
+
+.lokacija_map>iframe {
+  border: 1px solid gray;
+}
+
+.end>img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.end>div {
+  height: 0;
+}
+
+.footer_img_text {
+  position: relative;
+  top: -250px;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+  text-shadow: 3px 2px black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gradient_zaiskri {
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(194, 27, 103);
+  text-shadow: 2px 2px black;
+}
 
 /*modal css kod*/
 .modal {
@@ -230,18 +298,21 @@
   font-size: 15px;
 }
 
-#FullName, #Email, #Importance, #Message{
+#FullName,
+#Email,
+#Importance,
+#Message {
   width: 100%;
 }
 
-.kontakt_txtbox{
+.kontakt_txtbox {
   margin-bottom: 10px;
   border-radius: 5px;
   border: 1px solid gray;
 }
 
-#close_btn{
-  background-color: rgb(177,41,58);
+#close_btn {
+  background-color: rgb(177, 41, 58);
   border: none;
   color: white;
   width: 80px;
@@ -250,8 +321,8 @@
   cursor: pointer;
 }
 
-#sent_btn{
-  background-color: rgb(37,103,210);
+#sent_btn {
+  background-color: rgb(37, 103, 210);
   border: none;
   color: white;
   width: 80px;

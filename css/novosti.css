@@ -56,75 +56,15 @@
     /* Black w/ opacity */
 }
 
-.login_div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10vh;
-}
-
-#login_form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 400px;
-    width: 400px;
-}
-
-#login_title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: rgb(58, 58, 58);
-    font-size: 28px;
-    margin-bottom: 20px;
-    padding-bottom: 5px;
-}
-
-#login_textbox_email, #login_textbox_pass {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    height: 4vh;
-    border-radius: 5px;
-    border: 1px solid grey;
-    background-color: white;
-    padding: 10px;
-}
-
-#login_button {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    color: white;
-    background-color: rgb(83, 83, 83);
-    height: 35px;
-    border-radius: 7px;
-    border-color: transparent;
-    cursor: pointer;
-}
-
-#login_button:hover {
-    background-color: rgb(36, 36, 36);
-}
-
-.login_text {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(85, 76, 76);
-    font-size: 16px;
-    font-weight: bold;
-}
-
-#register {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    color: rgb(58, 58, 58);
-    margin-top: 10px;
-}
-
-#register a {
-    text-decoration: none;
-    color: rgb(72, 117, 255);
-}
+.first_h1_tag {
+    text-align: center;
+    padding-top: 2vw;
+  }
+  
+  .line_under_h1 {
+    width: 50%;
+    border: 1px solid orange;
+  }
 
 
 /* Modal Content */
