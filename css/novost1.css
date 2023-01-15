@@ -6,7 +6,6 @@
     justify-content: left;
 }
 
-
 /* Navbar links */
 
 .navbar a {
@@ -18,7 +17,6 @@
     font-size: 16px;
     padding: 15px 15px;
 }
-
 
 /* Navbar links on mouse-over */
 
@@ -35,73 +33,81 @@
     color: rgb(50, 187, 233);
 }
 
+.image-container {
+    overflow: hidden;
+    min-width: 100%;
+    height: 40vh;
+    animation: fade_in_img 0.8s;
+}
 
-/*modal css kod*/
-
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    padding: 10%;
-    z-index: 1;
-    /* Sit on top */
+.image-container>img {
+    object-fit: fill;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
+}
+
+.text_in_img {
+    text-shadow: 2px 2px black;
+    margin: 0 30%;
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: left;
+    position: relative;
+    top: -200px;
 }
 
 .first_h1_tag {
     text-align: center;
     padding-top: 2vw;
+    animation: fade_in 1s;
 }
 
 .line_under_h1 {
     width: 50%;
     border: 1px solid orange;
+    animation: fade_in 1s;
 }
 
-.slike_grid {
+section {
+    animation: fade_in 1s;
+}
+
+.content {
+    margin: 80px 20%;
+    text-align: left;
+    font-weight: 500;
+    font-size: 20px;
+    animation: fade_in 1s;
+}
+
+.gallery_grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15%;
-    padding: 100px 20%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0px 30% 30px 30%;
 }
 
-.grid_slika {
-    padding-bottom: 100%;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
+.gallery_grid>div {
+    margin: auto;
 }
 
-.grid_slika img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    border: 20px solid rgb(228, 226, 226);
-    border-radius: 50%;
+.gallery_grid>div>img {
+    grid-column: span 1;
+    grid-row: span 1;
+    width: 300px;
+    opacity: 0.6;
+    transition: 0.5s all ease-in-out;
 }
 
-.text_u_slici {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 12px;
-    text-align: center;
-    text-shadow: 2px 1px black;
+.video {
+    grid-column: span 2;
+    grid-row: span 1;
 }
 
-.yellow_date {
-    color: yellow;
+.gallery_grid>div>img:hover {
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .end>img {
@@ -132,6 +138,26 @@
     text-shadow: 2px 2px black;
 }
 
+/*modal css kod*/
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    padding: 10%;
+    z-index: 1;
+    /* Sit on top */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
 /* Modal Content */
 
 .modal-content {
@@ -153,6 +179,30 @@
     to {
         top: 0;
         opacity: 1
+    }
+}
+
+@keyframes fade_in_img {
+    0% {
+        transform: scaleY(0);
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleY(1);
+        transform-origin: 100% 0%;
+        opacity: 1;
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -200,7 +250,6 @@
     margin-right: 10px;
     cursor: pointer;
 }
-
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
 

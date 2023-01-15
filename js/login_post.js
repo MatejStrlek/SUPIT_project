@@ -3,7 +3,7 @@ window.onload = function() {
 
     const form = {
         username: document.querySelector("#login_textbox_email"),
-        password: document.querySelector("#register_textbox_pass"),
+        password: document.querySelector("#login_textbox_pass"),
         submit: document.querySelector("#login_button"),
         messages: document.getElementById("form-messages"),
     };
