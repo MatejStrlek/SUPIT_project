@@ -113,6 +113,11 @@
     font-weight: bold;
 }
 
+#message_register{
+    margin-top: 10px;
+    color: red;
+}
+
 
 /* Modal Content */
 

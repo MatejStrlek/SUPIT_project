@@ -13,6 +13,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Icons for navbar link -->
     <script src="https://kit.fontawesome.com/5a17698d7d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="../js/typing.js"></script>
     <link rel="stylesheet" href="../css/index.css" type="text/css">
 </head>
@@ -31,8 +32,11 @@
         <source src="../video/typingOnlaptop.mp4" type="video/mp4" />
     </video>
 
-    <div class="typing-div">
-        <p id="typing-p"></p>
+    <div id="typing-div" class="text-white">
+        <div>
+            <p id="typing-p-first"></p>
+            <p id="typing-p-second" class="text-danger"></p>
+        </div>
     </div>
 
     <div id="myModal" class="modal">

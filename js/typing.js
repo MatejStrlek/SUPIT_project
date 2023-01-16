@@ -1,32 +1,19 @@
-var i = 0;
-var j = 0;
-var txt1 = 'Budi izvrstan u onom što voliš.';
-var txt2 = 'ZAISKRI.'; /* The text */
-var speed = 150; /* The speed/duration of the effect in milliseconds */
+$(async () =>{
+    const timer = ms => new Promise(res => setTimeout(res, ms));
+    const data = "Budi izvrstan u onom što vidiš!$voliš!?ZAISKRI.";
+    var line = $("#typing-p-first");
 
-function secondTypeWriter(){
-
-    if(j == 0){
-        document.getElementById("typing-p").innerHTML += "<br/>";
+    for (let index = 0; index < data.length; index++) {
+        if(data[index] == '?'){
+            line.css({'animation': 'none'});
+            line = $("#typing-p-second");
+            line.css({'animation': 'blinkCursor 0.8s infinite'});
+        }else if(data[index] == '$'){
+            await timer(250);
+            line.text("Budi izvrstan u onom što ");
+        }else{
+            line.append(data[index]);
+        }
+        await timer(300);
     }
-       
-    if (j < txt2.length) {
-        document.getElementById("typing-p").innerHTML += txt2.charAt(j);
-        j++;
-        setTimeout(typeWriter, speed);
-    }
-}
-
-function typeWriter() {
-    if (i < txt1.length) {
-        document.getElementById("typing-p").innerHTML += txt1.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    } else{
-        secondTypeWriter();
-    }
-}
-
-window.onload = function() {
-    typeWriter();
-}
+});
