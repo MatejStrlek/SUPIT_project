@@ -28,8 +28,8 @@ window.onload = function () {
                     /*console.log(podaci.errorMessages[0]);*/
                     $('#message_login').text(podaci.errorMessages[0]).show().delay(3000).hide(300);
                 } else {
-                    localStorage.setItem('token', podaci['token']);
-                    localStorage.setItem('username', podaci['username']);
+                    localStorage.setItem('token', podaci.data.token);
+                    localStorage.setItem('username', podaci.data.username);
                     /*console.log(podaci.data.token);*/
                     $('#message_login').text(textSuccess).show().delay(3000).hide(300);
                     setTimeout(() => {
