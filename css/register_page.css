@@ -35,6 +35,9 @@
     color: rgb(50, 187, 233);
 }
 
+#nastavni_plan_hidden{
+    display: none;
+}
 
 /*modal css kod*/
 

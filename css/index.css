@@ -39,6 +39,10 @@
   color: rgb(50, 187, 233);
 }
 
+#nastavni_plan_hidden{
+  display: none;
+}
+
 #typing-div{
 	z-index: 1;
   height: 200px;

@@ -33,6 +33,10 @@
   color: rgb(50, 187, 233);
 }
 
+#nastavni_plan_hidden{
+  display: none;
+}
+
 .first_h1_tag {
   text-align: center;
   padding-top: 2vw;

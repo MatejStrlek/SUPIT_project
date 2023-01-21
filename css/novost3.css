@@ -33,6 +33,10 @@
     color: rgb(50, 187, 233);
 }
 
+#nastavni_plan_hidden{
+    display: none;
+}
+
 .image-container {
     overflow: hidden;
     min-width: 100%;
