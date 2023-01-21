@@ -2,13 +2,13 @@ window.onload = function () {
     var nastavni_plan = $("#nastavni_plan_hidden");
     var login_btn = $("#login_btn");
     var logout_btn = $("#logout_btn");
+    var username_text = $("#span_show_username");
 
     if (localStorage.hasOwnProperty('token')) {
         nastavni_plan.show();
         login_btn.hide();
         logout_btn.show();
-    } else {
-        nastavni_plan.hide();
+        username_text.text(localStorage.getItem('username'));
     }
 
     logout_btn.click(function () {
