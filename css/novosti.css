@@ -35,7 +35,11 @@
     color: rgb(50, 187, 233);
 }
 
-#nastavni_plan_hidden{
+#nastavni_plan_hidden {
+    display: none;
+}
+
+#logout_btn {
     display: none;
 }
 

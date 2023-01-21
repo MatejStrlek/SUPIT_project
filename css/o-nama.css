@@ -37,6 +37,10 @@
   display: none;
 }
 
+#logout_btn{
+  display: none;
+}
+
 .first_h1_tag {
   text-align: center;
   padding-top: 2vw;

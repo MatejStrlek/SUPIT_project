@@ -37,6 +37,10 @@
     display: none;
 }
 
+#logout_btn {
+    display: none;
+}
+
 .image-container {
     overflow: hidden;
     min-width: 100%;
