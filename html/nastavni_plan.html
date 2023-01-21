@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPIT projekt</title>
+
+    <link rel="shortcut icon" href="../img/Algebra-logo.png" type="image">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Icons for navbar link -->
+    <script src="https://kit.fontawesome.com/5a17698d7d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="../css/nastavni_plan.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <a href="login_page.html" id="login_btn">Prijavi se&nbsp;<i class="fa-solid fa-right-to-bracket login-col"></i></a>
+            <a href="#" id="logout_btn"><i class="fa-solid fa-right-to-bracket login-col"></i>&nbsp;Odjavi se <span id="span_show_username"></span></a>
+            <a href="index.html"><i class="fa-solid fa-house-chimney icon-col"></i>&nbsp;Početna</a>
+            <a href="o-nama.html"><i class="fa-regular fa-comments icon-col"></i>&nbsp;O nama</a>
+            <a href="novosti.html"><i class="fa-solid fa-circle-info icon-col"></i>&nbsp;Novosti</a>
+            <a href="nastavni_plan.html" id="nastavni_plan_hidden"><i class="fa-regular fa-calendar icon-col"></i>&nbsp;Nastavni plan</a>
+            <a href="#" id="kontakt"><i class="fa-solid fa-envelope icon-col"></i>&nbsp;Kontakt</a>
+        </div>
+    </header>
+
+    <h1 class="first_h1_tag">Nastavni plan</h1>
+    <hr class="line_under_h1">
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="inputKolegij">
+                    <label for="kolegij_naziv">Naziv kolegija: </label><br>
+                    <input id="kolegij_naziv" placeholder="Unesite naziv kolegija...">
+                </div>
+            </div>
+            <div class="col">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kolegij</th>
+                            <th>ECTS</th>
+                            <th>Sati</th>
+                            <th>Predavanja</th>
+                            <th>Vježbe</th>
+                            <th>Tip</th>
+                            <th class=button></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="sum">
+                            <td >Sum:</td>
+                            <td id="sumaID"></td>
+                            <td id="sumaHours"></td>
+                            <td id="sumaClass"></td>
+                            <td id="sumaPrac"></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer class="end">
+        <img src="../img/zaiskri-bg.jpg" alt="end">
+        <div>
+            <p class="footer_img_text">Budi izvrstan u onome što voliš</p>
+            <p class="footer_img_text gradient_zaiskri">Zaiskri</p>
+        </div>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-envelope"></i>&nbsp;Kontaktirajte nas</h2>
+            </div>
+            <div class="modal-body">
+                <form action="https://www.fulek.com/mvc/supit/project-contact-form" method="POST">
+                    <label for="FullName"><b>Puno Ime</b></label><br>
+                    <input type="text" id="FullName" class="kontakt_txtbox" name="FullName"><br>
+                    <label for="Email"><b>E-mail</b></label><br>
+                    <input type="text" id="Email" class="kontakt_txtbox" name="Email"><br>
+                    <label for="Importance"><b>Važnost</b></label><br>
+                    <select id="Importance" class="kontakt_txtbox" name="Importance">
+                        <option value="low">Niska</option>
+                        <option value="medium">Srednja</option>
+                        <option value="high">Visoka</option>
+                    </select><br>
+                    <label for="Message"><b>Poruka</b></label><br>
+                    <textarea id="Message" class="kontakt_txtbox" name="Message" rows="5" cols="30"></textarea><br>
+                    <label for="ReceiveNewsletter">Želim primati obavijesti</label>
+                    <input type="checkbox" id="ReceiveNewsletter" class="kontakt_txtbox" name="ReceiveNewsletter"
+                        value="true" checked="checked"><br>
+                    <input type="submit" id="sent_btn" value="Pošalji">
+                    <input type="button" id="close_btn" value="Odustani">
+                </form>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="../js/fetch_kolegiji.js"></script>
+    <script src="../js/kontakt_modal.js"></script>
+    <script src="../js/show_nastavni_plan.js"></script>
+
+</body>
+
+</html>
