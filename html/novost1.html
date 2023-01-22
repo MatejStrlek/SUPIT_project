@@ -14,18 +14,23 @@
     <!-- Icons for navbar link -->
     <script src="https://kit.fontawesome.com/5a17698d7d.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="../node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
     <link rel="stylesheet" href="../css/novost1.css" type="text/css">
+    <link rel="stylesheet" href="../node_modules/lightbox2/dist/css/lightbox.css">
 </head>
 
 <body>
     <header>
         <div class="navbar">
-            <a href="login_page.html" id="login_btn">Prijavi se&nbsp;<i class="fa-solid fa-right-to-bracket login-col"></i></a>
-            <a href="#" id="logout_btn"><i class="fa-solid fa-right-to-bracket login-col"></i>&nbsp;Odjavi se <span id="span_show_username"></span></a>
+            <a href="login_page.html" id="login_btn">Prijavi se&nbsp;<i
+                    class="fa-solid fa-right-to-bracket login-col"></i></a>
+            <a href="#" id="logout_btn"><i class="fa-solid fa-right-to-bracket login-col"></i>&nbsp;Odjavi se <span
+                    id="span_show_username"></span></a>
             <a href="index.html"><i class="fa-solid fa-house-chimney icon-col"></i>&nbsp;Početna</a>
             <a href="o-nama.html"><i class="fa-regular fa-comments icon-col"></i>&nbsp;O nama</a>
             <a href="novosti.html"><i class="fa-solid fa-circle-info icon-col"></i>&nbsp;Novosti</a>
-            <a href="nastavni_plan.html" id="nastavni_plan_hidden"><i class="fa-regular fa-calendar icon-col"></i>&nbsp;Nastavni plan</a>
+            <a href="nastavni_plan.html" id="nastavni_plan_hidden"><i
+                    class="fa-regular fa-calendar icon-col"></i>&nbsp;Nastavni plan</a>
             <a href="#" id="kontakt"><i class="fa-solid fa-envelope icon-col"></i>&nbsp;Kontakt</a>
         </div>
     </header>
@@ -60,16 +65,39 @@
             </p>
         </div>
 
-        <div class="gallery_grid">
-            <div><img src="../img/galerija1.jpg"></div>
-            <div><img src="../img/galerija2.jpg"></div>
-            <div class="video">
-                <video width="620" controls>
-                    <source src="../video/worldskills.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+        <div class="content-container">
+            <div>
+                <div class="image-container-gallery">
+                    <a href="../img/galerija1.jpg" data-lightbox="slike">
+                        <img src="../img/galerija1.jpg">
+                    </a>
+                    <a href="../img/galerija2.jpg" data-lightbox="slike">
+                        <img src="../img/galerija2.jpg">
+                    </a>
+                </div>
+                <div class="video-container">
+                    <video width="620" controls>
+                        <source src="../video/worldskills.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
+        <!--<div class="content-container">
+            <div>
+                <div class="image-container">
+                    <a href="../img/galerija1.jpg" data-lightbox="slike">
+                        <img src="../img/galerija1.jpg" alt="slika 1.">
+                    </a>
+                    <a href="../img/galerija2.jpg" data-lightbox="slike">
+                        <img src="../img/galerija2.jpg" alt="slika 2.">
+                    </a>
+                </div>
+                <div class="video-container">
+                    <video src="../video/worldskills.mp4" controls></video>
+                </div>
+            </div>
+        </div>-->
     </section>
 
     <section class="end">
@@ -111,6 +139,7 @@
     </div>
     <script src="../js/kontakt_modal.js"></script>
     <script src="../js/show_nastavni_plan.js"></script>
+    <script src="../js/light_box.js"></script>
 
 </body>
 
