@@ -40,6 +40,10 @@ $(() => {
                     <td><button id="deleteRow" class='btn btn-danger'>Obriši</button></td>
                     </tr>
                     `);
+                    $('#sumECTS').text(Number($('#sumECTS').text()) + podaci.data.ects);
+                    $('#sumHours').text(Number($('#sumHours').text()) + podaci.data.sati);
+                    $('#sumClass').text(Number($('#sumClass').text()) + podaci.data.predavanja);
+                    $('#sumPrac').text(Number($('#sumPrac').text()) + podaci.data.vjezbe);
                 },
                 headers: {
                     Authorization: 'Bearer ' + localStorage.getItem('token')
@@ -53,6 +57,11 @@ $(() => {
     });
 
     $('table').on('click', '#deleteRow', function () {
+        var currentRow = $(this).closest("tr");
+        $('#sumECTS').text(Number($('#sumECTS').text()) - Number(currentRow.find("td:eq(1)").text()));
+        $('#sumHours').text(Number($('#sumHours').text()) - Number(currentRow.find("td:eq(2)").text()));
+        $('#sumClass').text(Number($('#sumClass').text()) - Number(currentRow.find("td:eq(3)").text()));
+        $('#sumPrac').text(Number($('#sumPrac').text()) - Number(currentRow.find("td:eq(4)").text()));
         $(this).closest('tr').remove();
     });
 });

@@ -8,11 +8,12 @@ window.onload = function () {
         nastavni_plan.show();
         login_btn.hide();
         logout_btn.show();
-        username_text.text(localStorage.getItem('username'));
+        username_text.text(localStorage.getItem('username')).css("color", "rgb(50, 187, 233)");
     }
 
     logout_btn.click(function () {
         localStorage.clear();
         location.reload();
+        location.replace("index.html");
     });
 }
