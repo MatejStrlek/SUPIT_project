@@ -170,7 +170,7 @@
 }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .navbar a {
     float: none;
     display: block;
