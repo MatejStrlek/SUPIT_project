@@ -2,7 +2,6 @@
 $(() => {
     const autoCompleteArr = [];
     const dictKolegij = {};
-    var sum = [];
 
     const response = $.ajax({
         url: 'https://www.fulek.com/data/api/supit/curriculum-list/hr',
