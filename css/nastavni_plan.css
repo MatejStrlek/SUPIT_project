@@ -1,14 +1,21 @@
-/* Style the navigation bar */
+html,body {
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+body>* {
+    flex-shrink: 0;
+}
 
+/* Style the navigation bar */
 .navbar {
     width: 100%;
     background-color: rgb(0, 0, 0);
     justify-content: left;
 }
 
-
 /* Navbar links */
-
 .navbar a {
     float: left;
     text-align: center;
@@ -19,9 +26,7 @@
     padding: 15px 15px;
 }
 
-
 /* Navbar links on mouse-over */
-
 .navbar a:hover {
     background-color: rgb(0, 0, 0);
     color: yellow;
@@ -59,7 +64,7 @@
     /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, .4);
     /* Black w/ opacity */
 }
 
@@ -76,6 +81,10 @@
     animation: slide-in-bottom 1s;
 }
 
+.container {
+    animation: fade_in 1.5s;
+}
+
 .text_u_slici {
     position: absolute;
     top: 50%;
@@ -87,10 +96,6 @@
     text-shadow: 2px 1px black;
 }
 
-
-
-
-
 .inputKolegij{
     font-weight: bold;
     margin-right: 20px;
@@ -100,7 +105,7 @@
 .inputKolegij > input{
     min-width: 75%;
     width: 100%;
-    border: 1px solid rgba(116, 116, 116, 0.499);
+    border: 1px solid rgba(116, 116, 116, .499);
     border-radius: 4px;
     padding: 5px;
     margin-top: 10px;
@@ -111,17 +116,17 @@ table{
 }
 
 table > thead > tr > th{
-    border-top: 1px solid rgba(137, 137, 137, 0.4) ;
+    border-top: 1px solid rgba(137, 137, 137, .4) ;
     padding: 5px 20px 5px 5px;
 }
 
 table > tbody > tr:nth-child(even){
-    background-color: rgba(180, 179, 179, 0.351);
+    background-color: rgba(180, 179, 179, .351);
 }
 
 table > tbody > tr > td{
     padding: 5px;
-    border-top: 1px solid rgba(137, 137, 137, 0.4) ;
+    border-top: 1px solid rgba(137, 137, 137, .4) ;
     padding-right: 20px;    
 }
 
@@ -131,37 +136,27 @@ table > tbody > tr > td{
     background-color: white;
 }
 
-
-
-
-
-
-.end>img {
-    object-fit: cover;
-    width: 100%;
-    height: 300px;
+.end {
+    flex-grow: 1;
+    background-image: url('../img/zaiskri-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    display: flex;
 }
 
 .end>div {
-    height: 0px;
+    width: 100%;
 }
 
-.footer_img_text {
-    position: relative;
-    transform: translate(0%, -300%);
+.end-text {
+    text-shadow: 2px 2px 5px black;
     color: white;
-    font-size: 50px;
-    font-weight: 600;
-    text-shadow: 3px 2px black;
-    text-align: center;
+    font-weight: 700;
+    font-size: 42px;
     text-transform: uppercase;
-}
-
-.gradient_zaiskri {
-    font-size: 50px;
-    font-weight: 600;
-    color: rgb(194, 27, 103);
-    text-shadow: 2px 2px black;
+    text-align: center;
+    align-items: center;
 }
 
 /* Modal Content */
@@ -172,11 +167,11 @@ table > tbody > tr > td{
     margin: 0 auto;
     padding: 10px;
     width: 50%;
-    animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-name: animate_top;
+    animation-duration: .4s
 }
 
-@keyframes animatetop {
+@keyframes animate_top {
     from {
         top: -300px;
         opacity: 0
@@ -196,6 +191,16 @@ table > tbody > tr > td{
 
     100% {
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
         opacity: 1;
     }
 }

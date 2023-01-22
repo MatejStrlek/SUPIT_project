@@ -1,3 +1,14 @@
+html,body {
+  overflow-x: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+body>* {
+  flex-shrink: 0;
+}
+
 /* Style the navigation bar */
 .navbar {
   width: 100%;
@@ -56,7 +67,7 @@
   z-index: -10;
   background-image: url(../img/kampus-iz-zraka-min-1.jpg);
   background-position: center;
-  animation: fade_in_img 0.8s;
+  animation: fade_in_img 1s;
 }
 
 .naslovi {
@@ -226,34 +237,27 @@
   border: 1px solid gray;
 }
 
-.end>img {
-  object-fit: cover;
-  width: 100%;
-  height: 250px;
+.end {
+  flex-grow: 1;
+  background-image: url('../img/zaiskri-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
 }
 
 .end>div {
-  height: 0;
+  width: 100%;
 }
 
-.footer_img_text {
-  position: relative;
-  top: -250px;
-  left: 50%;
-  transform: translate(-50%, 30%);
+.end-text {
+  text-shadow: 2px 2px 5px black;
   color: white;
-  font-size: 50px;
-  font-weight: 600;
-  text-shadow: 3px 2px black;
-  text-align: center;
+  font-weight: 700;
+  font-size: 42px;
   text-transform: uppercase;
-}
-
-.gradient_zaiskri {
-  font-size: 50px;
-  font-weight: 600;
-  color: rgb(194, 27, 103);
-  text-shadow: 2px 2px black;
+  text-align: center;
+  align-items: center;
 }
 
 /*modal css kod*/
@@ -271,7 +275,7 @@
   /* Full height */
   overflow: auto;
   /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, .4);
   /* Black w/ opacity */
 }
 
@@ -282,11 +286,11 @@
   margin: 0 auto;
   padding: 10px;
   width: 50%;
-  animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-name: animate_top;
+  animation-duration: .4s
 }
 
-@keyframes animatetop {
+@keyframes animate_top {
   from {
     top: -300px;
     opacity: 0
@@ -360,7 +364,7 @@
 }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .navbar a {
     float: none;
     display: block;
