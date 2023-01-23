@@ -99,35 +99,6 @@ section {
     animation: fade_in 1s;
 }
 
-/* .gallery_grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    margin: 0px 30% 30px 30%;
-}
-
-.gallery_grid>div {
-    margin: auto;
-}
-
-.gallery_grid>div>img {
-    grid-column: span 1;
-    grid-row: span 1;
-    width: 300px;
-    opacity: .6;
-    transition: .5s all ease-in-out;
-}
-
-.video {
-    grid-column: span 2;
-    grid-row: span 1;
-}
-
-.gallery_grid>div>img:hover {
-    opacity: 1;
-    transform: scale(1.1);
-} */
-
 .content-container {
     display: flex;
     justify-content: center;

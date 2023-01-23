@@ -64,6 +64,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 10vh;
+    animation: fade_in 1s;
 }
 
 #login_form {
@@ -155,6 +156,16 @@
     to {
         top: 0;
         opacity: 1
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
