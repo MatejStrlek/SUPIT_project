@@ -21,12 +21,15 @@
 <body>
     <header>
         <div class="navbar">
-            <a href="login_page.html" id="login_btn">Prijavi se&nbsp;<i class="fa-solid fa-right-to-bracket login-col"></i></a>
-            <a href="#" id="logout_btn"><i class="fa-solid fa-right-to-bracket login-col"></i>&nbsp;Odjavi se <span id="span_show_username"></span></a>
+            <a href="login_page.html" id="login_btn">Prijavi se&nbsp;<i
+                    class="fa-solid fa-right-to-bracket login-col"></i></a>
+            <a href="#" id="logout_btn"><i class="fa-solid fa-right-to-bracket login-col"></i>&nbsp;Odjavi se <span
+                    id="span_show_username"></span></a>
             <a href="index.html"><i class="fa-solid fa-house-chimney icon-col"></i>&nbsp;Početna</a>
             <a href="o-nama.html"><i class="fa-regular fa-comments icon-col"></i>&nbsp;O nama</a>
             <a href="novosti.html"><i class="fa-solid fa-circle-info icon-col"></i>&nbsp;Novosti</a>
-            <a href="nastavni_plan.html" id="nastavni_plan_hidden"><i class="fa-regular fa-calendar icon-col"></i>&nbsp;Nastavni plan</a>
+            <a href="nastavni_plan.html" id="nastavni_plan_hidden"><i
+                    class="fa-regular fa-calendar icon-col"></i>&nbsp;Nastavni plan</a>
             <a href="#" id="kontakt"><i class="fa-solid fa-envelope icon-col"></i>&nbsp;Kontakt</a>
         </div>
     </header>
@@ -34,12 +37,16 @@
         <source src="../video/typingOnlaptop.mp4" type="video/mp4" />
     </video>
 
-    <div id="typing-div" class="text-white">
-        <div>
-            <p id="typing-p-first"></p>
-            <p id="typing-p-second" class="text-danger"></p>
+        <div id="typing_div" class="container text-white">
+            <div>
+                <div class="row">
+                    <p id="typing_p1"></p>
+                </div>
+                <div class="row">
+                    <p id="typing_p2" class="text-danger"></p>
+                </div>
+            </div>
         </div>
-    </div>
 
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -71,8 +78,9 @@
 
     </div>
     </div>
+    
     <script src="../js/kontakt_modal.js"></script>
-    <script src="../js/show_nastavni_plan.js"></script>
+    <script src="../js/show_hide_nastavni_plan.js"></script>
 
 </body>
 

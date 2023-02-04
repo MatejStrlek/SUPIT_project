@@ -8,14 +8,12 @@ body>* {
     flex-shrink: 0;
 }
 
-/* Style the navigation bar */
 .navbar {
     width: 100%;
     background-color: rgb(0, 0, 0);
     justify-content: left;
 }
 
-/* Navbar links */
 .navbar a {
     float: left;
     text-align: center;
@@ -25,9 +23,6 @@ body>* {
     font-size: 16px;
     padding: 15px 15px;
 }
-
-
-/* Navbar links on mouse-over */
 
 .navbar a:hover {
     background-color: rgb(0, 0, 0);
@@ -50,8 +45,6 @@ body>* {
     display: none;
 }
 
-/*modal css kod*/
-
 .modal {
     display: none;
     /* Hidden by default */
@@ -73,13 +66,13 @@ body>* {
 .first_h1_tag {
     text-align: center;
     padding-top: 2vw;
-    animation: slide-in-bottom 1s;
+    animation: slidein_bottom 1s;
 }
 
 .line_under_h1 {
     width: 50%;
     border: 1px solid orange;
-    animation: slide-in-bottom 1s;
+    animation: slidein_bottom 1s;
 }
 
 .slike_grid {
@@ -145,8 +138,6 @@ body>* {
     align-items: center;
 }
 
-/* Modal Content */
-
 .modal-content {
     position: relative;
     background-color: #fefefe;
@@ -169,7 +160,7 @@ body>* {
     }
 }
 
-@keyframes slide-in-bottom {
+@keyframes slidein_bottom {
     0% {
         transform: translateY(100px);
         opacity: 0;
@@ -235,9 +226,6 @@ body>* {
     margin-right: 10px;
     cursor: pointer;
 }
-
-
-/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
 
 @media screen and (max-width: 768px) {
     .navbar a {

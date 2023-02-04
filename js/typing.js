@@ -1,19 +1,22 @@
-$(async () =>{
-    const timer = ms => new Promise(res => setTimeout(res, ms));
-    const data = "Budi izvrstan u onom što vidiš!$voliš!?ZAISKRI.";
-    var line = $("#typing-p-first");
-
-    for (let index = 0; index < data.length; index++) {
-        if(data[index] == '?'){
-            line.css({'animation': 'none'});
-            line = $("#typing-p-second");
-            line.css({'animation': 'blinkCursor 0.8s infinite'});
-        }else if(data[index] == '$'){
-            await timer(250);
-            line.text("Budi izvrstan u onom što ");
-        }else{
-            line.append(data[index]);
-        }
-        await timer(300);
-    }
+$(async () => {
+    const typingText = "Budi izvrstan u onom što vidiš!/voliš!-ZAISKRI.";
+    const line = $("#typing_p1");
+    await typeText(line, typingText);
 });
+
+const typeText = async (line, typingText) => {
+    let charIndex = 0;
+    while (charIndex < typingText.length) {
+        const letter = typingText[charIndex];
+        if (letter === "/") {
+            line.text("Budi izvrstan u onom što ");
+        } else if (letter === "-") {
+            line.css({'animation': 'none'});
+            line = $("#typing_p2");
+        } else {
+            line.append(letter);
+        }
+        charIndex++;
+        await new Promise(resolve => setTimeout(resolve, 300));
+    }
+};

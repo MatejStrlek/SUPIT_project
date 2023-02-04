@@ -1,24 +1,28 @@
-var modal = document.getElementById("myModal");
-var kontakt = document.getElementById("kontakt");
+const modal = document.getElementById("myModal");
+const kontakt = document.getElementById("kontakt");
+const closeBtn = document.getElementById("close_btn");
+
+if (!modal){
+  console.log("modal was not found!")
+}
 
 if (!kontakt) {
-  console.error("kontakt was not found");
+  console.error("kontakt was not found!");
 } else {
-  kontakt.onclick = function () {
+  kontakt.onclick = () => {
       modal.style.display = "block";
   }
 }
 
-var closeBtn = document.getElementById("close_btn");
 if (!closeBtn) {
-  console.error("close_btn was not found");
+  console.error("close_btn was not found!");
 } else {
     closeBtn.onclick = function () {
       modal.style.display = "none";
   }
 }
 
-window.onclick = function (event) {
+window.onclick = (event) => {
     if (event.target == modal) {
         modal.style.display = "none";
     }
