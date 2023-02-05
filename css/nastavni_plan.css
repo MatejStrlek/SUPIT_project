@@ -236,4 +236,8 @@ table>tbody>tr>td {
         float: none;
         display: block;
     }
+    
+    .inputKolegij{
+        height: 100px;
+    }
 }
