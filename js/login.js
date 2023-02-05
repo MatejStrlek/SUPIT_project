@@ -23,7 +23,7 @@ window.onload = () => {
                     /*console.log(podaci.data.token);*/
                     $('#message_login').text("Uspješna prijava :) Na početnu stranicu za 3, 2, 1...").show().delay(3000).hide(300);
                     setTimeout(() => {
-                        window.location.replace("index.html");
+                        location.replace("index.html");
                     }, 3000);
                 }
                 else {

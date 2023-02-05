@@ -20,7 +20,7 @@ window.onload = () => {
                 },
                 body: JSON.stringify({
                     username: username,
-                    password: password,
+                    password: password
                 })
             })
             .then((response) => response.json())

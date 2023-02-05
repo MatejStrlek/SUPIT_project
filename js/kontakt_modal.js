@@ -8,7 +8,7 @@ kontakt
 
 closeBtn
   ? closeBtn.onclick = () => modal.style.display = "none"
-  : console.error("close_btn was not found!");
+  : console.error("closeBtn was not found!");
 
 window.onclick = (event) => {
   if (event.target == modal)

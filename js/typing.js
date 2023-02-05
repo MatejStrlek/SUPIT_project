@@ -1,22 +1,24 @@
 $(async () => {
     const typingText = "Budi izvrstan u onom što vidiš!/voliš!-ZAISKRI.";
-    const line = $("#typing_p1");
-    await typeText(line, typingText);
+    const p = $("#typing_p1");
+    await typeText(p, typingText);
 });
 
-const typeText = async (line, typingText) => {
-    let charIndex = 0;
-    while (charIndex < typingText.length) {
-        const letter = typingText[charIndex];
+const typeText = async (p, typingText) => {
+    let letterIndex = 0;
+
+    while (letterIndex < typingText.length) {
+        const letter = typingText[letterIndex];
         if (letter === "/") {
-            line.text("Budi izvrstan u onom što ");
+            p.text("Budi izvrstan u onom što ");
         } else if (letter === "-") {
-            line.css({ 'animation': 'none' });
-            line = $("#typing_p2");
+            p.css({ 'animation': 'none' });
+            p = $("#typing_p2");
         } else {
-            line.append(letter);
+            p.append(letter);
         }
-        charIndex++;
-        await new Promise((resolve, reject) => setTimeout(resolve, 300));
+
+        letterIndex++;
+        await new Promise(resolve => setTimeout(resolve, 300));
     }
 };

@@ -17,7 +17,7 @@ $(() => {
         })
         .then(podaci => {
             const allData = podaci.data;
-            console.log(allData);
+            /*console.log(allData);*/
             for (const course of allData) {
                 autoSuggest.push(course.kolegij);
                 courseDictionary[course.kolegij] = course.id;
@@ -26,7 +26,7 @@ $(() => {
         .catch(error => console.error(error));
 
 
-    $('#kolegij_naziv').autocomplete({
+    $('#kolegij_name').autocomplete({
         maxShowItems: 6,
         minLength: 2,
         source: autoSuggest,
@@ -44,9 +44,9 @@ $(() => {
             const podaci = await response.json();
             const allData = podaci.data;
 
-            const $tableBody = $('table tbody');
-            const $lastRow = $tableBody.find('tr:last-child');
-            const $newRow = $(`
+            const tableBody = $('table tbody');
+            const lastRow = tableBody.find('tr:last-child');
+            const newRow = $(`
                 <tr>
                   <td>${allData.kolegij}</td>
                   <td>${allData.ects}</td>
@@ -54,28 +54,26 @@ $(() => {
                   <td>${allData.predavanja}</td>
                   <td>${allData.vjezbe}</td>
                   <td>${allData.tip}</td>
-                  <td><button id="deleteRow" class='btn btn-danger'>Obriši</button></td>
+                  <td><button id="delete_kolegij" class='btn btn-danger'>Obriši</button></td>
                 </tr>
               `);
-            $lastRow.before($newRow);
+            lastRow.before(newRow);
 
             updateTotals(allData);
         }
     });
 
-    $("#kolegij_naziv").on('click', function () {
-        this.value = "";
-    });
-
-    $('table').on('click', '#deleteRow', function () {
+    $('table').on('click', '#delete_kolegij', function () {
         const currentRow = $(this).closest("tr");
         const columns = currentRow.find("td");
+
         updateTotals({
             ects: -Number(columns.eq(1).text()),
             sati: -Number(columns.eq(2).text()),
             predavanja: -Number(columns.eq(3).text()),
-            vjezbe: -Number(columns.eq(4).text()),
+            vjezbe: -Number(columns.eq(4).text())
         });
+
         $(this).closest('tr').remove();
     });
 
@@ -85,4 +83,8 @@ $(() => {
         $('#sumClass').text(Number($('#sumClass').text()) + data.predavanja);
         $('#sumPrac').text(Number($('#sumPrac').text()) + data.vjezbe);
     };
+
+    $("#kolegij_name").on('click', function () {
+        this.value = "";
+    });
 });
