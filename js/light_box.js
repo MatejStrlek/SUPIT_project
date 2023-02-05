@@ -1,6 +1,6 @@
 lightbox.option({
-    'resizeDuration': 200,
-    'wrapAround': true,
-    'showImageNumberLabel': true, 
-    'enableKeyboardNav': true 
-  });
+  'resizeDuration': 200,
+  'wrapAround': true,
+  'showImageNumberLabel': true,
+  'enableKeyboardNav': true
+});

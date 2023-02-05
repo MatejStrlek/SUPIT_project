@@ -25,7 +25,7 @@ window.onload = () => {
                     setTimeout(() => {
                         window.location.replace("index.html");
                     }, 3000);
-                } 
+                }
                 else {
                     /*console.log(podaci.errorMessages[0]);*/
                     $('#message_login').text(podaci.errorMessages[0]).show().delay(3000).hide(300);

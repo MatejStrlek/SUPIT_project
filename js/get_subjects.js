@@ -33,14 +33,13 @@ $(() => {
         select: async (e, ui) => {
             const courseId = courseDictionary[ui.item.label];
             const response = await fetch(
-                `https://www.fulek.com/data/api/supit/get-curriculum/${courseId}`,
-                {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Authorization: `Bearer ${localStorage.getItem('token')}`
-                    }
+                `https://www.fulek.com/data/api/supit/get-curriculum/${courseId}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
+            }
             );
             const podaci = await response.json();
             const allData = podaci.data;
@@ -60,13 +59,6 @@ $(() => {
               `);
             $lastRow.before($newRow);
 
-            const updateTotals = ({ ects, sati, predavanja, vjezbe }) => {
-                $('#sumECTS').text(Number($('#sumECTS').text()) + ects);
-                $('#sumHours').text(Number($('#sumHours').text()) + sati);
-                $('#sumClass').text(Number($('#sumClass').text()) + predavanja);
-                $('#sumPrac').text(Number($('#sumPrac').text()) + vjezbe);
-            };
-
             updateTotals(allData);
         }
     });
@@ -78,16 +70,19 @@ $(() => {
     $('table').on('click', '#deleteRow', function () {
         const currentRow = $(this).closest("tr");
         const columns = currentRow.find("td");
-        const currentECTS = Number(columns.eq(1).text());
-        const currentHours = Number(columns.eq(2).text());
-        const currentClass = Number(columns.eq(3).text());
-        const currentPrac = Number(columns.eq(4).text());
-
-        $('#sumECTS').text(Number($('#sumECTS').text()) - currentECTS);
-        $('#sumHours').text(Number($('#sumHours').text()) - currentHours);
-        $('#sumClass').text(Number($('#sumClass').text()) - currentClass);
-        $('#sumPrac').text(Number($('#sumPrac').text()) - currentPrac);
-
+        updateTotals({
+            ects: -Number(columns.eq(1).text()),
+            sati: -Number(columns.eq(2).text()),
+            predavanja: -Number(columns.eq(3).text()),
+            vjezbe: -Number(columns.eq(4).text()),
+        });
         $(this).closest('tr').remove();
     });
+
+    const updateTotals = (data) => {
+        $('#sumECTS').text(Number($('#sumECTS').text()) + data.ects);
+        $('#sumHours').text(Number($('#sumHours').text()) + data.sati);
+        $('#sumClass').text(Number($('#sumClass').text()) + data.predavanja);
+        $('#sumPrac').text(Number($('#sumPrac').text()) + data.vjezbe);
+    };
 });

@@ -11,12 +11,12 @@ const typeText = async (line, typingText) => {
         if (letter === "/") {
             line.text("Budi izvrstan u onom što ");
         } else if (letter === "-") {
-            line.css({'animation': 'none'});
+            line.css({ 'animation': 'none' });
             line = $("#typing_p2");
         } else {
             line.append(letter);
         }
         charIndex++;
-        await new Promise(resolve => setTimeout(resolve, 300));
+        await new Promise((resolve, reject) => setTimeout(resolve, 300));
     }
 };

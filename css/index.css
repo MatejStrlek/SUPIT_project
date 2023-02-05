@@ -1,177 +1,166 @@
 #main_video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -10;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
 }
 
 .navbar {
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-  justify-content: left;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    justify-content: left;
 }
 
 .navbar a {
-  float: left;
-  text-align: center;
-  padding: 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  padding: 15px 15px;
+    float: left;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px 15px;
 }
 
 .navbar a:hover {
-  background-color: rgb(0, 0, 0);
-  color: yellow;
+    background-color: rgb(0, 0, 0);
+    color: yellow;
 }
 
 .icon-col {
-  color: orange;
+    color: orange;
 }
 
 .login-col {
-  color: rgb(50, 187, 233);
+    color: rgb(50, 187, 233);
 }
 
 #nastavni_plan_hidden {
-  display: none;
+    display: none;
 }
 
 #logout_btn {
-  display: none;
+    display: none;
 }
 
 #typing_div {
-  z-index: 1;
-  height: 200px;
-  font-weight: 500;
-  text-shadow: 2px 2px 5px black;
-  font-size: 50px;
-  margin-top: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: left;
+    z-index: 1;
+    height: 200px;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px black;
+    font-size: 50px;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
 }
 
 #typing_p1 {
-  border-right: 8px solid transparent;
-  animation: cursor_blinking 1s infinite;
-  padding-right: 5px;
+    border-right: 8px solid transparent;
+    animation: cursor_blinking 1s infinite;
+    padding-right: 5px;
 }
 
 #typing_p2 {
-  border-right: 8px solid transparent;
-  display: inline-block;
-  padding-right: 5px;
-  animation: cursor_blinking 1s infinite;
+    border-right: 8px solid transparent;
+    display: inline-block;
+    padding-right: 5px;
+    animation: cursor_blinking 1s infinite;
 }
 
-/*modal css kod*/
 .modal {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Stay in place */
-  padding: 10%;
-  z-index: 1;
-  /* Sit on top */
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, .4);
-  /* Black w/ opacity */
+    display: none;
+    position: fixed;
+    padding: 10%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .4);
 }
 
 .modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: 0 auto;
-  padding: 10px;
-  width: 50%;
-  animation-name: animate_top;
-  animation-duration: .4s
+    position: relative;
+    background-color: #fefefe;
+    margin: 0 auto;
+    padding: 10px;
+    width: 50%;
+    animation-name: animate_top;
+    animation-duration: .4s
 }
 
 @keyframes animate_top {
-  from {
-    top: -300px;
-    opacity: 0
-  }
-
-  to {
-    top: 0;
-    opacity: 1
-  }
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 
 @keyframes cursor_blinking {
-  0% {
-    border-color: transparent;
-  }
-
-  50% {
-    border-color: white;
-  }
-
-  100% {
-    border-color: transparent;
-  }
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: white;
+    }
+    100% {
+        border-color: transparent;
+    }
 }
 
 .modal-header {
-  padding: 15px;
-  color: rgb(24, 31, 73);
-  border: none;
+    padding: 15px;
+    color: rgb(24, 31, 73);
+    border: none;
 }
 
 .modal-body {
-  padding: 2px 16px;
-  font-size: 15px;
+    padding: 2px 16px;
+    font-size: 15px;
 }
 
 #FullName,
 #Email,
 #Importance,
 #Message {
-  width: 100%;
+    width: 100%;
 }
 
 .kontakt_txtbox {
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid gray;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
 }
 
 #close_btn {
-  background-color: rgb(177, 41, 58);
-  border: none;
-  color: white;
-  width: 80px;
-  height: 30px;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: rgb(177, 41, 58);
+    border: none;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 #sent_btn {
-  background-color: rgb(37, 103, 210);
-  border: none;
-  color: white;
-  width: 80px;
-  height: 30px;
-  border-radius: 5px;
-  margin-right: 10px;
-  cursor: pointer;
+    background-color: rgb(37, 103, 210);
+    border: none;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
+    .navbar a {
+        float: none;
+        display: block;
+    }
 }
