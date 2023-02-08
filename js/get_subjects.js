@@ -78,10 +78,10 @@ $(() => {
     });
 
     const updateTotals = (data) => {
-        $('#sumECTS').text(Number($('#sumECTS').text()) + data.ects);
-        $('#sumHours').text(Number($('#sumHours').text()) + data.sati);
-        $('#sumClass').text(Number($('#sumClass').text()) + data.predavanja);
-        $('#sumPrac').text(Number($('#sumPrac').text()) + data.vjezbe);
+        $('#ectsID').text(Number($('#ectsID').text()) + data.ects);
+        $('#satiID').text(Number($('#satiID').text()) + data.sati);
+        $('#predavanjaID').text(Number($('#predavanjaID').text()) + data.predavanja);
+        $('#vjezbeID').text(Number($('#vjezbeID').text()) + data.vjezbe);
     };
 
     $("#kolegij_name").on('click', function () {
